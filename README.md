@@ -1,6 +1,6 @@
 # print-response
 
-Print beautified **Fastify inject**-response in terminal: app.inject(opts).then(printResponse). Color indication of http-status and http-method, brief representation of massive body, optional headers output.
+Print beautified **[Fastify](https://www.npmjs.com/package/fastify) [inject](https://www.fastify.io/docs/latest/Guides/Testing/#benefits-of-using-fastifyinject)**-response in terminal. Color indication of http-status and http-method, brief representation of massive body, optional headers output.
 
 `app.inject({ method: 'GET', url: 'sample/users' }).then(response => {printResponse(response, {showHeaders: true})})`
 
