@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/**/*"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    // source maps are necessery in DEV mode to show right refs,
+    // but it optional in PRODUCTION mode
+    "sourceMap": false,
+    // this flag accelerates sequential build but creates files,
+    // which is unnecessary in dist folder
+    "incremental": false,
+    "declaration": true,
+    "removeComments": false
+  }
+}
