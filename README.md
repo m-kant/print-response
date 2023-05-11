@@ -18,8 +18,12 @@ Print beautified Fastify inject-response in terminal: app.inject(opts).then(prin
 import app from "./fastify-app";
 import printResponse from 'print-response';
 
-response = await app.inject({ method: 'GET', url: 'sample/users' })
-printResponse(response, {showHeaders: true})
-
 app.inject({ method: 'GET', url: 'sample/users/2' }).then(printResponse)
+
+// with async/await
+main();
+async function main(){
+  response = await app.inject({ method: 'GET', url: 'sample/users' })
+  printResponse(response, {showHeaders: true})
+}
 ```
